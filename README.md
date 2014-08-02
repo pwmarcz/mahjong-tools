@@ -1,7 +1,9 @@
 
 # Mahjong tools
 
-These are a few HTML-based tools related to Mahjong.
+Here are a few HTML-based tools related to Mahjong.
+
+See http://pwmarcz.pl/mahjong-tools/ for a live version.
 
 - `house-rules` (Polish only) - house rules generator for Riichi
   Mahjong. Customize and print.
