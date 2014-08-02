@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <title>House rules</title>
+    <meta charset="utf-8">
+    <script type="yaml" id="rules-yaml">
+        - name: Czerwone piątki
+          select:
+            - Nie ma
+            - 1-1-1
+            - 1-2-1 (dwie piątki Pin)
+          initial: 2
+        - name: Kuikae (zmiana grupy)
+          select:
+            - Niedozwolone
+            - Dozwolone
+        - name: Tan Yao
+          select:
+            - Otwarte
+            - Zamknięte
+          initial: 2
+        - name: Wielokrotny Ron
+          select:
+            - Atama Hane
+            - Podwójny (potrójny kończy rozdanie)
+            - Potrójny
+          initial: 3
+        - name: Wielokrotne Riichi
+          select:
+            - Podwójne (potrójne kończy rozdanie)
+            - Potrójne (poczwórne kończy rozdanie)
+          initial: 2
+        - name: Runda Zachodu i Północy
+          select:
+            - Nie ma
+            - Jeśli żaden z graczy nie będzie miał powyżej 30 000
+        - name: Pierwszeństwo Pon/Chi
+          select:
+            - Pon
+            - Wcześniejsza odzywka
+        - name: Chankan na zamkniętym Kan
+          select:
+            - Kokushi Musou
+            - Nie ma
+        - name: Odwracanie kan dory
+          select:
+            - Zawsze przed odrzuceniem
+            - Przy otwartym Kan po odrzuceniu
+        - name: Pao
+          check:
+            - Ostatni smok do Dai San Gen
+            - Ostatni wiatr do Dai Suu Shii
+            - Kamień do otwartego Kan
+          initial: 1, 2, 3
+        - name: Podwójny yakuman
+          check:
+            - Dai Suu Shii
+            - Kokushi Musou z 13-krotnym czekaniem
+            - Chuuren Poutou z 9-krotnym czekaniem
+            - Suu An Kou z czekaniem na parę
+            - Dai Chii Sei (siedem par honorów)
+            - Kombinacja innych yakumanów
+          initial: 1, 2, 3, 4
+        - name: Kazoe yakuman
+          select:
+            - Dozwolony
+            - Niedozwolony (limitem jest sanbaiman)
+        - name: Opcjonalne yakumany
+          check:
+            - Dai Sharin (z Pinów)
+            - Dai Sharin (dowolna rodzina)
+            - Paarenchan
+            - Suu Ren Kou (cztery kolejne Pon)            
+          initial: 1, 3
+        - name: Zaokrąglenie do mangana
+          select:
+            - Nie ma (mangan od 4/40 i 3/70)
+            - Jest (mangan od 4/30 i 3/60)
+        - name: Ograniczenie fan
+          select:
+            - Zawsze 1 fan
+            - 1 fan, 2 fan po pięciu honbach
+            - Mangan
+          initial: 2
+        - name: Honba
+          select:
+            - Zwykła (300)
+            - "3 000"
+        - name: Open Riichi
+          select:
+            - Nie ma
+            - Dozwolone, z ujawnieniem czekania
+            - Dozwolone, z ujawnieniem całej ręki
+        - name: Yakuman za Ron przy Open Riichi
+          select:
+            - Nie ma
+            - Jest
+        - name: Wareme
+          select:
+            - Nie ma
+            - Jest
+        - name: Inne
+          input: true
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            border: solid thin black;
+        }
+        td {
+            border: solid thin black;
+            padding: 0.3em;
+        }
+        td.name {
+            width: 15em;
+        }
+        td.options {
+            width: 30em;
+        }
+        input.opt:not(:checked) + * { color: gray; }
+        .text {
+            font-family: serif;
+        }
+    </style>
+    <style media="print">
+        input.opt { display: none; }
+        input.opt:not(:checked) + * { display: none; }
+        .text { border: none; }
+    </style>
+    <script src="js-yaml.js"></script>
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="rules.js"></script>
+</head>
+<body>
+<h1>House rules</h1>
+<table id="rules-table"></table>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html><head>
+    <title>Zung Jung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+	<script src="zungjung.js"></script>
+
+<style>
+td.opis { width: 30em; }
+td.punkty { 
+  border-right: solid thin black; 
+  text-align: right;
+}
+td {
+  border-style: none;
+  padding: 0.1em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.title td {
+  font-weight: bold;
+  text-align: center;
+}
+.subtitle td {
+  text-align: center;
+  font-weight: bold;
+  background: #eee;
+  border: solid 4px black;
+}
+.first td {
+  border-top: solid thin black;
+}
+
+table {
+  border-collapse: collapse;
+  border: solid thin black;
+}
+
+tr { border-right: solid thin black; }
+
+.options {
+  display: inline-block;
+  width: auto;
+  border: solid 1px black;
+  padding: 1em;
+}
+</style>
+
+<style media="print">
+.options { display: none; }
+</style>
+
+</head>
+
+
+<body>
+
+<div class="options">
+Language:
+<select id="lang" onchange="redraw()">
+ <option selected="selected">pl</option>
+ <option>en</option>
+</select><br>
+
+<input type="checkbox" id="use_jp" checked="checked" onchange="redraw()">
+<label for="use_jp">Kanji names</label><br>
+
+<input type="checkbox" id="use_hepburn" checked="checked" onchange="redraw()">
+<label for="use_hepburn">Hepburn romanization (ō, ū)</label><br>
+
+Multiplier:
+<select id="multiplier" onchange="redraw()">
+ <option>0.2</option>
+ <option selected="selected">1</option>
+ <option>20</option>
+</select><br>
+
+<!-- <input type="button" id="redraw" value="Redraw"></input> -->
+
+</div>
+
+<div id="content">
+
+</html>

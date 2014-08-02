@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="handgen.js"></script>
+<body>
+<style>
+#descr { width: 30em; }
+#image { margin: 1em; }
+</style>
+
+<p><input type="checkbox" id="big" onChange="init();">
+<label for="big">Big icons</label></p>
+
+<p>Icons by <a href="http://martinpersson.org">Martin Persson</a>.</p>
+
+<input type="text" id="descr" onInput="drawHand();"
+ value="1-3m, 4-6m, 7-9m, chun chun chun, 2p 2p"></input>
+ 
+ <br><br>
+
+<canvas id="image">
+
+</body>
