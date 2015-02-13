@@ -23,11 +23,11 @@ function updateLanguage() {
 
 function forLanguages(content, func) {
     if (typeof content === 'string') {
-        func(hepburn(content), 'all');
+        func(content, 'all');
     } else {
         $.each(LANGUAGES, function(i, lang) {
             if (content[lang]) {
-                func(hepburn(content[lang]), lang);
+                func(content[lang], lang);
             }
         });
     }
@@ -84,12 +84,6 @@ function renderOpt(type, i, j, val, initial) {
     if (initial.indexOf(j+1) != -1)
         elt.find('input').attr('checked', true);
     return elt;
-}
-
-function hepburn(s) {
-    return s.replace(/ou/g, "ō")
-            .replace(/uu/g, "ū")
-            .replace(/aa/g, "ā");
 }
 
 $(prepare);
