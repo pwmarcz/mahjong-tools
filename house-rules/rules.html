@@ -134,11 +134,13 @@
         .text {
             font-family: serif;
         }
+        tr.language { color: gray; }
     </style>
     <style media="print">
         input.opt { display: none; }
         input.opt:not(:checked) + * { display: none; }
         .text { border: none; }
+        tr.language { display: none; }
     </style>
     <script src="js-yaml.js"></script>
     <script src="jquery-2.0.3.min.js"></script>
@@ -146,6 +148,15 @@
 </head>
 <body>
 <h1>House rules</h1>
-<table id="rules-table"></table>
+
+<table id="rules-table">
+  <tr class="language">
+    <td class="name">Language</td>
+    <td class="options">
+      <label><input class="opt" type="radio" name="language" value="en" />English</label><br>
+      <label><input class="opt" type="radio" name="language" value="pl" />Polish</label>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
