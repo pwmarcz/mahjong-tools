@@ -23,11 +23,11 @@ function updateLanguage() {
 
 function forLanguages(content, func) {
     if (typeof content === 'string') {
-        func(content, 'all');
+        func(hepburn(content), 'all');
     } else {
         $.each(LANGUAGES, function(i, lang) {
             if (content[lang]) {
-                func(content[lang], lang);
+                func(hepburn(content[lang]), lang);
             }
         });
     }
