@@ -49,6 +49,14 @@
             en: Triple (quadruple Riichi forces a draw)
         initial: 2
       - name:
+          pl: Wielokrotny Kan
+          en: Multiple Kan
+        select:
+          - pl: Potrójny (czwarty Kan kończy rozdanie, z wyjątkiem Suukantsu)
+            en: Triple (fourth Kan forces a draw, except Suukantsu)
+          - pl: Poczwórny (nie można deklarować kolejnych)
+            en: Quadruple (no further Kan can be declared)
+      - name:
           pl: Runda Zachodu i Północy
           en: West and South rounds
         select:
@@ -72,6 +80,15 @@
             en: None
           - pl: 60 000
             en: 60,000
+      - name:
+          pl: Ujemny wynik
+          en: Negative score
+        select:
+          - pl: Dopuszczalny
+            en: Allowed
+          - pl: Kończy grę
+            en: Finishes the game
+        initial: 2
       - name:
           pl: Pierwszeństwo Pon/Chi
           en: Pon/Chi precedence
@@ -106,6 +123,15 @@
           - pl: Kamień do otwartego Kan
             en: Open Kan tile
         initial: 1, 2, 3
+      - name: Nagashi Mangan
+        select:
+          - pl: Niedozwolony
+            en: Not allowed
+          - pl: Dozwolony, liczony jako wygrana
+            en: Allowed, scored as a win
+          - pl: Dozwolony, liczony jako dodatkowa premia (runda pozostaje remisem)
+            en: Allowed, scored as bonus payment (round still considered drawn)
+        initial: 2
       - name:
           pl: Podwójny yakuman
           en: Double yakuman
@@ -141,7 +167,9 @@
           - Pārenchan
           - pl: Sū Ren Kō (cztery kolejne Pon)
             en: Sū Ren Kō (four consecutive triplets)
-        initial: 1, 3
+          - pl: Renhō
+            en: Renhō
+        initial: 1, 3, 5
       - name:
           pl: Zaokrąglenie do mangana
           en: Mangan rounding-up
@@ -188,6 +216,22 @@
             en: No
           - pl: Jest
             en: Yes
+      - name:
+          pl: Suufon renda
+          en: Suufon renda
+        select:
+          - pl: Niedozwolone
+            en: Not allowed
+          - pl: Dozwolone
+            en: Allowed
+      - name:
+          pl: Kyuushuu kyuuhai
+          en: Kyuushuu kyuuhai
+        select:
+          - pl: Niedozwolone
+            en: Not allowed
+          - pl: Dozwolone
+            en: Allowed
       - name:
           pl: Inne
           en: Other
